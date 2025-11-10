@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>류세린 HR Digitalization & TD Vision Portfolio</title>
+    <!-- Tailwind CSS 로드 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter 폰트 및 다크 모드 스타일 설정 -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
+        body {
+            font-family: 'Noto Sans KR', 'Inter', sans-serif;
+            /* 배경색: GitHub Dark (#0D1117) */
+            background-color: #0D1117; 
+            color: #e6e6e6; 
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            /* 악센트 색상: Mint Green/Teal (#5EEAD4) */
+            background-color: #5EEAD4;
+            margin-top: 8px;
+            border-radius: 2px;
+        }
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            font-size: 0.875rem;
+            font-weight: 600;
+            line-height: 1;
+            /* 뱃지 악센트 색상 */
+            color: #5EEAD4;
+            /* 뱃지 배경: Lighter Dark (#161B22) */
+            background-color: #161B22;
+            border-radius: 0.5rem;
+            border: 1px solid #5EEAD4;
+        }
+        .lang-button.active {
+            background-color: #5EEAD4;
+            color: #161B22;
+        }
+    </style>
+</head>
+<body class="antialiased p-4 sm:p-8">
+
+    <div class="max-w-4xl mx-auto bg-[#161B22] shadow-2xl rounded-xl p-6 md:p-10 lg:p-12 space-y-12">
+        
+        <!-- 언어 전환 버튼 -->
+        <div class="text-right pb-4">
+            <button id="lang-ko" onclick="setLanguage('ko')" class="lang-button px-4 py-2 text-sm font-semibold rounded-lg transition duration-200 bg-[#30363d] text-white active">KO</button>
+            <button id="lang-en" onclick="setLanguage('en')" class="lang-button px-4 py-2 text-sm font-semibold rounded-lg transition duration-200 bg-[#30363d] text-white">EN</button>
+        </div>
+
+        <!-- 1. 헤더 및 소개 섹션 -->
+        <header class="text-center pb-6 border-b border-[#30363d]">
+            <h1 class="text-4xl sm:text-5xl font-extrabold text-[#5EEAD4] tracking-tight mb-2" data-i18n-key="name">류세린 (Selin Ryu)</h1>
+            <p class="text-xl sm:text-2xl font-light text-gray-400" data-i18n-key="job_title">HR Digitalization & Talent Development Specialist</p>
+            <div class="mt-4 flex justify-center space-x-4 text-sm text-gray-400">
+                <span data-i18n-key="email"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block mr-1 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg> Selinryu01@gmail.com</span>
+                <span data-i18n-key="location"><svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 inline-block mr-1 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243m10.606 0a6 6 0 10-8.484-8.484m8.484 8.484L12 21.002 7.05 16.052m0 0a6 6 0 108.484 8.484" /></svg> 대구, 대한민국</span>
+            </div>
+        </header>
+
+        <!-- [NEW] 상세 프로젝트 버튼 - 상단에 크게 배치 -->
+        <div class="text-center py-4">
+            <a href="https://selinryu92.github.io/HR_L-D-specialist/" target="_blank" 
+               class="inline-flex items-center justify-center w-full sm:w-auto px-8 py-3 text-lg font-bold text-gray-900 
+                      bg-[#5EEAD4] rounded-xl shadow-lg hover:bg-teal-400 transition duration-300 transform hover:scale-[1.01]">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+                <span data-i18n-key="main_project_link">상세 프로젝트 포트폴리오 (바로가기)</span>
+            </a>
+        </div>
+        <!-- [END NEW] 상세 프로젝트 버튼 -->
+
+        <!-- 2. 핵심 요약 및 강점 -->
+        <section>
+            <h2 class="section-title text-3xl font-bold mb-6" data-i18n-key="summary_title">핵심 요약 및 강점</h2>
+            <p class="text-gray-300 leading-relaxed text-lg mb-4" data-i18n-key="summary_text">
+                **HR 담당자 및 임원 보조(Executive Assistant)** 경력을 통해 복잡한 기업 시스템 및 워크플로우를 관리하고 **데이터 정확성**을 유지한 전문가입니다. 
+                특히, 글로벌 항공사 경력을 통해 체득한 **탁월한 고객 서비스 및 커뮤니케이션 능력**은 HR 시스템 도입 및 디지털 전환 과정에서 **사용자 경험(UX) 중심**의 변화 관리를 이끌 강력한 기반입니다.
+            </p>
+            <div class="flex flex-wrap gap-4 mt-6">
+                <span class="badge" data-i18n-key="strength1">시스템 기반 프로세스 관리</span>
+                <span class="badge" data-i18n-key="strength2">데이터 정확성 및 보고</span>
+                <span class="badge" data-i18n-key="strength3">뛰어난 직원/고객 커뮤니케이션</span>
+                <span class="badge" data-i18n-key="strength4">Workday/CLM 시스템 적응 능력</span>
+            </div>
+        </section>
+        
+        <!-- 3. 주요 경력 및 성과 -->
+        <section>
+            <h2 class="section-title text-3xl font-bold mb-6" data-i18n-key="experience_title">주요 경력 및 성과</h2>
+
+            <!-- 경력 1: BorgWarner 강조 (시스템 관리 능력 재구성) -->
+            <div class="mb-8 p-6 bg-[#1f242d] rounded-lg border-l-4 border-teal-500">
+                <h3 class="text-xl font-semibold text-white" data-i18n-key="exp1_title">BorgWarner Korea - HR 담당자 및 임원 보조</h3>
+                <p class="text-teal-300 text-sm mt-1 mb-3" data-i18n-key="exp1_period">2020.11 - 2022.12</p>
+                <ul class="list-disc ml-5 space-y-2 text-gray-300">
+                    <li data-i18n-key="exp1_detail1">**시스템 워크플로우 관리**: 300명 이상 직원의 신규 입사/퇴사(Onboarding/Offboarding) 프로세스를 전담 관리 및 조직. 이는 복잡한 **Workday/CLM/CRM**과 같은 기업 시스템 관리 능력의 기초가 됩니다.</li>
+                    <li data-i18n-key="exp1_detail2">**데이터 정확성 및 재무 지원**: 주간 단위 경비 보고서, 구매 주문서, 인보이스 처리 등 필수 회계 활동을 수행하며 **높은 데이터 정확성**을 유지.</li>
+                    <li data-i18n-key="exp1_detail3">**행정 및 조직 관리**: 모든 기업 회의를 조직하고 관리하며, Account Manager의 견적 제안 및 인보이스 관련 문의에 효율적으로 대응.</li>
+                </ul>
+            </div>
+
+            <!-- 경력 2: Coupang (데이터 정확성) -->
+            <div class="mb-8 p-6 bg-[#1f242d] rounded-lg border-l-4 border-teal-500">
+                <h3 class="text-xl font-semibold text-white" data-i18n-key="exp2_title">Coupang, Korea - 검색 적합성 라벨링</h3>
+                <p class="text-teal-300 text-sm mt-1 mb-3" data-i18n-key="exp2_period">2024.01 - 2025.10</p>
+                <ul class="list-disc ml-5 space-y-2 text-gray-300">
+                    <li data-i18n-key="exp2_detail1">제품 카탈로그에 대한 정확한 데이터 관리 및 비즈니스 규칙 준수 보장.</li>
+                    <li data-i18n-key="exp2_detail2">카탈로그 업데이트 관련 QA 팀과 효과적인 커뮤니케이션 수행.</li>
+                </ul>
+            </div>
+            
+            <!-- 경력 3: Cabin Crew (서비스/UX) -->
+            <div class="p-6 bg-[#1f242d] rounded-lg border-l-4 border-teal-500">
+                <h3 class="text-xl font-semibold text-white" data-i18n-key="exp3_title">글로벌 항공사 (Cathay Pacific Airways 외) - Cabin Crew</h3>
+                <p class="text-teal-300 text-sm mt-1 mb-3" data-i18n-key="exp3_period">2016.10 - 2020.12</p>
+                <ul class="list-disc ml-5 space-y-2 text-gray-300">
+                    <li data-i18n-key="exp3_detail1">글로벌 환경에서 탁월한 **구두 및 서면 영어 소통 능력** 배양.</li>
+                    <li data-i18n-key="exp3_detail2">고객 문제 및 특별 요청을 **전문적이고 침착하게** 처리하는 능력 (HR 시스템 사용자의 경험을 개선할 수 있는 UX 마인드).</li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- 4. HR 콘텐츠 디지털 워크벤치 (Gemini API 활용) -->
+        <section>
+            <h2 class="section-title text-3xl font-bold mb-6" data-i18n-key="workbench_title">HR 콘텐츠 디지털 워크벤치 (AI Agent 활용 시뮬레이션)</h2>
+            <div class="bg-[#1f242d] p-6 rounded-lg space-y-6">
+                
+                <p class="text-sm text-gray-400" data-i18n-key="workbench_desc">
+                    **AI Agent (Copilot, ChatGPT)**를 활용하여 HR/L&D 콘텐츠를 신속하게 검토 및 생성하는 전문가 역량 시뮬레이션입니다.
+                </p>
+
+                <!-- 툴 1: 교육 목적 요약 -->
+                <div>
+                    <h3 class="text-xl font-semibold text-teal-400 mb-3" data-i18n-key="tool1_title">1. 교육 목적 요약 및 목표 설정 지원</h3>
+                    <textarea id="eduInput" class="w-full p-3 bg-[#0D1117] border border-gray-600 rounded-lg text-gray-300 focus:ring-teal-500 focus:border-teal-500" rows="4" data-i18n-placeholder="tool1_placeholder" placeholder="교육 자료의 개요 또는 학습 내용을 입력하세요 (예: 전동화 기술의 기본 원리, 핵심 부품 개요 및 안전 지침)."></textarea>
+                    <button onclick="summarizeEducationGoal()" id="tool1_btn" class="mt-2 w-full sm:w-auto px-4 py-2 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition duration-200" data-i18n-key="tool1_button">교육 목표 요약 요청</button>
+                </div>
+
+                <!-- 툴 2: JD 초안 생성 -->
+                <div>
+                    <h3 class="text-xl font-semibold text-teal-400 mb-3" data-i18n-key="tool2_title">2. HR 디지털/TD 직무 기술서 (JD) 초안 생성</h3>
+                    <textarea id="jdInput" class="w-full p-3 bg-[#0D1117] border border-gray-600 rounded-lg text-gray-300 focus:ring-teal-500 focus:border-teal-500" rows="2" data-i18n-placeholder="tool2_placeholder" placeholder="추가하고 싶은 핵심 역할 (예: Workday LMS 모듈 운영, 현장 교육 콘텐츠 디지털화)"></textarea>
+                    <button onclick="generateJobDescription()" id="tool2_btn" class="mt-2 w-full sm:w-auto px-4 py-2 bg-teal-600 text-white font-semibold rounded-lg hover:bg-teal-700 transition duration-200" data-i18n-key="tool2_button">JD 초안 생성 요청</button>
+                </div>
+
+                <!-- 결과 표시 영역 -->
+                <div id="resultContainer" class="mt-4 p-4 bg-[#0D1117] border border-teal-500 rounded-lg hidden">
+                    <h4 class="text-lg font-bold text-teal-400 mb-2" data-i18n-key="result_header">AI 분석 결과:</h4>
+                    <p id="geminiResult" class="whitespace-pre-wrap text-gray-300"></p>
+                    <div id="loadingIndicator" class="text-sm text-yellow-500 mt-2 hidden" data-i18n-key="loading">AI가 콘텐츠를 생성 중입니다...</div>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- 5. 기술 및 자격증 -->
+        <section>
+            <h2 class="section-title text-3xl font-bold mb-6" data-i18n-key="skill_title">핵심 기술 및 자격</h2>
+            <div class="flex flex-wrap gap-3">
+                <span class="badge" data-i18n-key="skill1">HRIS/LMS: **Workday** 기반 HR 프로세스 관리 및 L&D 시스템 이해</span>
+                <span class="badge" data-i18n-key="skill2">디지털 플랫폼: **SharePoint, Power Automate** 기반 워크플로우 자동화</span>
+                <span class="badge" data-i18n-key="skill3">AI 활용: **AI Agent (Copilot, ChatGPT)**를 활용한 HR 콘텐츠 및 응대 효율화</span>
+                <span class="badge" data-i18n-key="skill4">교육 자격: **4대 법정교육 강사 자격증 2개 이수 (NEW)**</span>
+                <span class="badge" data-i18n-key="skill5">HR 프로세스: Onboarding/Offboarding 300+ 관리 경험</span>
+                <span class="badge" data-i18n-key="skill6">소통: 영어 (비즈니스 유창), 전문적 고객 응대</span>
+            </div>
+        </section>
+
+        <!-- 6. 교육 배경 -->
+        <section>
+            <h2 class="section-title text-3xl font-bold mb-6" data-i18n-key="edu_title">교육 배경</h2>
+            <div class="space-y-4">
+                <div class="flex justify-between items-center bg-[#1f242d] p-4 rounded-lg">
+                    <div>
+                        <h4 class="text-lg font-semibold text-white" data-i18n-key="edu1_degree">항공 서비스학 학사 (GPA 4.37/4.5)</h4>
+                        <p class="text-gray-400" data-i18n-key="edu1_uni">동신대학교</p>
+                    </div>
+                    <p class="text-teal-400" data-i18n-key="edu1_period">2011.03 - 2016.02</p>
+                </div>
+                <div class="flex justify-between items-center bg-[#1f242d] p-4 rounded-lg">
+                    <div>
+                        <h4 class="text-lg font-semibold text-white" data-i18n-key="edu2_degree">교환학생 (중국어 과정 이수)</h4>
+                        <p class="text-gray-400" data-i18n-key="edu2_uni">저장 과학 기술 대학교 (Zhejiang University of Science and Technology)</p>
+                    </div>
+                    <p class="text-teal-400" data-i18n-key="edu2_period">2015.09 - 2016.01</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 7. 연락처 및 링크 -->
+        <footer class="pt-8 border-t border-[#30363d] text-center">
+            <p class="text-gray-400 mb-4" data-i18n-key="contact_message">저의 HR Digitalization & Talent Development Specialist로서의 비전을 더 깊이 논의할 기회를 기대합니다.</p>
+            <div class="flex justify-center space-x-6">
+                <a href="mailto:Selinryu01@gmail.com" class="text-teal-400 hover:text-teal-300 transition duration-300" data-i18n-key="contact_email">이메일 문의</a>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // 다국어 콘텐츠 정의
+        const translations = {
+            ko: {
+                job_title: "HR Digitalization & Talent Development Specialist",
+                location: "대구, 대한민국",
+                main_project_link: "상세 프로젝트 포트폴리오 (바로가기)",
+                summary_title: "핵심 요약 및 강점",
+                summary_text: "**HR 담당자 및 임원 보조(Executive Assistant)** 경력을 통해 복잡한 기업 시스템 및 워크플로우를 관리하고 **데이터 정확성**을 유지한 전문가입니다. 특히, 글로벌 항공사 경력을 통해 체득한 **탁월한 고객 서비스 및 커뮤니케이션 능력**은 HR 시스템 도입 및 디지털 전환 과정에서 **사용자 경험(UX) 중심**의 변화 관리를 이끌 강력한 기반입니다.",
+                strength1: "시스템 기반 프로세스 관리",
+                strength2: "데이터 정확성 및 보고",
+                strength3: "뛰어난 직원/고객 커뮤니케이션",
+                strength4: "Workday/CLM 시스템 적응 능력",
+                experience_title: "주요 경력 및 성과",
+                exp1_title: "(유)보그워너창녕 - HR 담당자 및 임원 보조", // 변경됨
+                exp1_period: "2020.11 - 2022.12",
+                exp1_detail1: "**시스템 워크플로우 관리**: 300명 이상 직원의 신규 입사/퇴사(Onboarding/Offboarding) 프로세스를 전담 관리 및 조직. 이는 복잡한 **Workday/CLM/CRM**과 같은 기업 시스템 관리 능력의 기초가 됩니다.",
+                exp1_detail2: "**데이터 정확성 및 재무 지원**: 주간 단위 경비 보고서, 구매 주문서, 인보이스 처리 등 필수 회계 활동을 수행하며 **높은 데이터 정확성**을 유지.",
+                exp1_detail3: "**행정 및 조직 관리**: 모든 기업 회의를 조직하고 관리하며, Account Manager의 견적 제안 및 인보이스 관련 문의에 효율적으로 대응.",
+                exp2_title: "쿠팡 - 검색 적합성 라벨링", // 변경됨 (Korea 삭제)
+                exp2_period: "2024.01 - 2025.10",
+                exp2_detail1: "제품 카탈로그에 대한 정확한 데이터 관리 및 비즈니스 규칙 준수 보장.",
+                exp2_detail2: "카탈로그 업데이트 관련 QA 팀과 효과적인 커뮤니케이션 수행.",
+                exp3_title: "글로벌 항공사 (Cathay Pacific Airways 외) - Cabin Crew",
+                exp3_period: "2016.10 - 2020.12",
+                exp3_detail1: "글로벌 환경에서 탁월한 **구두 및 서면 영어 소통 능력** 배양.",
+                exp3_detail2: "고객 문제 및 특별 요청을 **전문적이고 침착하게** 처리하는 능력 (HR 시스템 사용자의 경험을 개선할 수 있는 UX 마인드).",
+                workbench_title: "HR 콘텐츠 디지털 워크벤치 (AI Agent 활용 시뮬레이션)",
+                workbench_desc: "**AI Agent (Copilot, ChatGPT)**를 활용하여 HR/L&D 콘텐츠를 신속하게 검토 및 생성하는 전문가 역량 시뮬레이션입니다.",
+                tool1_title: "1. 교육 목적 요약 및 목표 설정 지원",
+                tool1_placeholder: "교육 자료의 개요 또는 학습 내용을 입력하세요 (예: 전동화 기술의 기본 원리, 핵심 부품 개요 및 안전 지침).",
+                tool1_button: "교육 목표 요약 요청",
+                tool2_title: "2. HR 디지털/TD 직무 기술서 (JD) 초안 생성",
+                tool2_placeholder: "추가하고 싶은 핵심 역할 (예: Workday LMS 모듈 운영, 현장 교육 콘텐츠 디지털화)",
+                tool2_button: "JD 초안 생성 요청",
+                result_header: "AI 분석 결과:",
+                loading: "AI가 콘텐츠를 생성 중입니다...",
+                skill_title: "핵심 기술 및 자격",
+                skill1: "HRIS/LMS: **Workday** 기반 HR 프로세스 관리 및 L&D 시스템 이해",
+                skill2: "디지털 플랫폼: **SharePoint, Power Automate** 기반 워크플로우 자동화",
+                skill3: "AI 활용: **AI Agent (Copilot, ChatGPT)**를 활용한 HR 콘텐츠 및 응대 효율화",
+                skill4: "교육 자격: **4대 법정교육 강사 자격증 2개 이수 (NEW)**",
+                skill5: "HR 프로세스: Onboarding/Offboarding 300+ 관리 경험",
+                skill6: "소통: 영어 (비즈니스 유창), 전문적 고객 응대",
+                edu_title: "교육 배경",
+                edu1_degree: "항공 서비스학 학사 (GPA 4.37/4.5)",
+                edu1_uni: "동신대학교",
+                edu2_degree: "교환학생 (중국어 과정 이수)",
+                edu2_uni: "저장 과학 기술 대학교 (Zhejiang University of Science and Technology)",
+                contact_message: "저의 HR Digitalization & Talent Development Specialist로서의 비전을 더 깊이 논의할 기회를 기대합니다.",
+                contact_email: "이메일 문의",
+                contact_link: "Detailed Projects (GitHub)" 
+            },
+            en: {
+                job_title: "HR Digitalization & Talent Development Specialist",
+                location: "Daegu, Republic of Korea",
+                main_project_link: "Detailed Project Portfolio (Go to)",
+                summary_title: "Core Summary & Strengths",
+                summary_text: "A specialist experienced in managing complex enterprise systems and workflows, maintaining **data accuracy** through roles as an **HR Coordinator & Executive Assistant**. Crucially, the **exceptional customer service and communication skills** acquired from global airline experience provide a strong foundation for leading **User Experience (UX)-centric** change management in HR system implementation and digital transformation.",
+                strength1: "System-based Process Management",
+                strength2: "Data Accuracy & Reporting",
+                strength3: "Excellent Employee/Customer Communication",
+                strength4: "Adaptability to Workday/CLM Systems",
+                experience_title: "Key Experience & Achievements",
+                exp1_title: "BorgWarner Korea - HR Coordinator & Executive Assistant",
+                exp1_period: "Nov 2020 - Dec 2022",
+                exp1_detail1: "**System Workflow Management**: Led and organized Onboarding/Offboarding processes for 300+ employees, demonstrating foundational competency in managing complex enterprise systems like **Workday/CLM/CRM**.",
+                exp1_detail2: "**Data Accuracy & Financial Support**: Performed essential accounting activities, including weekly processing of expense reports, purchase orders, and invoices, maintaining **high data accuracy**.",
+                exp1_detail3: "**Administration & Organization**: Organized and managed all corporate meetings and efficiently responded to inquiries from Account Managers regarding quotations and invoices.",
+                exp2_title: "Coupang, Korea - Search Relevance Labeling",
+                exp2_period: "Jan 2024 - Oct 2025",
+                exp2_detail1: "Ensured accurate data management and compliance with business rules for product catalogs.",
+                exp2_detail2: "Maintained effective communication with the Quality Assurance team regarding catalog updates.",
+                exp3_title: "Global Airlines (Cathay Pacific Airways etc.) - Cabin Crew",
+                exp3_period: "Oct 2016 - Dec 2020",
+                exp3_detail1: "Cultivated exceptional **spoken and written English communication skills** in a global setting.",
+                exp3_detail2: "Ability to handle customer issues and special requests **professionally and calmly** (UX mindset crucial for HR systems).",
+                workbench_title: "HR Content Digital Workbench (AI Agent Simulation)",
+                workbench_desc: "A simulation of professional competency in using **AI Agents (Copilot, ChatGPT)** to rapidly review and generate HR/L&D content.",
+                tool1_title: "1. Educational Goal Summary & Objective Setting Support",
+                tool1_placeholder: "Enter the synopsis or learning content (e.g., Basic principles of electrification technology, overview of core components, and safety guidelines).",
+                tool1_button: "Request Goal Summary",
+                tool2_title: "2. HR Digital/TD Job Description (JD) Draft Generation",
+                tool2_placeholder: "Enter core roles to add (e.g., Operate Workday LMS module, Digitalize on-site training content)",
+                tool2_button: "Request JD Draft",
+                result_header: "AI Analysis Result:",
+                loading: "AI is generating content...",
+                skill_title: "Core Skills & Qualifications",
+                skill1: "HRIS/LMS: **Workday** based HR Process Management and L&D System Understanding",
+                skill2: "Digital Platforms: **SharePoint, Power Automate** based Workflow Automation",
+                skill3: "AI Utilization: Leveraging **AI Agents (Copilot, ChatGPT)** for HR Content and Response Efficiency",
+                skill4: "Training Qualification: **Completed 2 Instructor Certifications for 4 Major Statutory Trainings (NEW)**",
+                skill5: "HR Process: Onboarding/Offboarding 300+ Management Experience",
+                skill6: "Communication: Business Fluent English, Professional Customer Service",
+                edu_title: "Educational Background",
+                edu1_degree: "BA in Airline Services (GPA 4.37/4.5)",
+                edu1_uni: "Dong-Shin University",
+                edu2_degree: "Exchange Student (Chinese Language Course)",
+                edu2_uni: "Zhejiang University of Science and Technology",
+                contact_message: "I look forward to the opportunity to discuss my vision as an HR Digitalization & Talent Development Specialist further.",
+                contact_email: "Email Inquiry",
+                contact_link: "Detailed Projects (GitHub)"
+            }
+        };
+
+        let currentLang = 'ko';
+        const model = 'gemini-2.5-flash-preview-09-2025';
+        const apiKey = ""; 
+
+        // Exponential backoff utility for fetch
+        async function fetchWithRetry(url, options, maxRetries = 5) {
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (!response.ok) {
+                        if (response.status === 429 && i < maxRetries - 1) { // Rate limit or temporary error
+                            const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                            await new Promise(resolve => setTimeout(resolve, delay));
+                            continue;
+                        }
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response;
+                } catch (error) {
+                    if (i === maxRetries - 1) throw error;
+                    const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+        }
+        
+        function updateUI(isLoading, content = null) {
+            const loadingIndicator = document.getElementById('loadingIndicator');
+            const resultContainer = document.getElementById('resultContainer');
+            const resultDisplay = document.getElementById('geminiResult');
+
+            if (isLoading) {
+                loadingIndicator.classList.remove('hidden');
+                resultContainer.classList.remove('hidden');
+                resultDisplay.textContent = '';
+            } else {
+                loadingIndicator.classList.add('hidden');
+                if (content) {
+                    resultDisplay.textContent = content;
+                }
+            }
+        }
+
+        async function callGemini(systemPrompt, userQuery) {
+            updateUI(true);
+
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+                config: {
+                    temperature: 0.5 // Creative for HR content
+                }
+            };
+
+            try {
+                const response = await fetchWithRetry(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                const text = result.candidates?.[0]?.content?.parts?.[0]?.text || translations[currentLang].error_message || "API 호출에 실패했거나 응답이 비어있습니다.";
+                updateUI(false, text);
+            } catch (error) {
+                console.error("Gemini API Error:", error);
+                updateUI(false, translations[currentLang].api_error || "API 호출 중 오류가 발생했습니다.");
+            }
+        }
+
+        function summarizeEducationGoal() {
+            const input = document.getElementById('eduInput').value.trim();
+            if (!input) {
+                alert(currentLang === 'ko' ? "교육 내용을 입력해주세요." : "Please enter the educational content.");
+                return;
+            }
+
+            const systemPrompt = `Act as a senior HRD specialist. Review the following educational content or synopsis and output a concise summary focusing ONLY on the core HRD/L&D objective, target audience benefit, and quantifiable learning goal. Respond in ${currentLang === 'ko' ? 'Korean' : 'English'}. The output should be formatted clearly with headings like '교육 목표' or 'Learning Goal'.`;
+
+            const userQuery = `다음 교육 자료의 목표를 HRD 관점에서 요약하고 학습 목표를 설정해 주세요:\n\n---\n${input}`;
+            
+            callGemini(systemPrompt, userQuery);
+        }
+
+        function generateJobDescription() {
+            const input = document.getElementById('jdInput').value.trim();
+            const baseRoles = "HRIS (Workday) 관리, SharePoint/Power Automate를 활용한 HR 워크플로우 자동화, L&D 프로그램 지원, Workday LMS 통합 및 운영, AI Agent (Copilot) 활용 능력. ";
+            const fullRoles = baseRoles + (input ? `\n추가 역할: ${input}` : "");
+
+            const systemPrompt = `Act as a recruiter for a multinational automotive company (BorgWarner). Draft a Job Description (JD) for an 'HR Digitalization & Talent Development Specialist'. The output must be formatted clearly using a list of bullet points for Key Responsibilities and Required Qualifications. Respond in ${currentLang === 'ko' ? 'Korean' : 'English'}.`;
+            
+            const userQuery = `다음 핵심 역할을 포함하는 HR Digitalization & TD Specialist의 JD 초안을 작성해주세요:\n\n핵심 역할:\n${fullRoles}`;
+
+            callGemini(systemPrompt, userQuery);
+        }
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            const elements = document.querySelectorAll('[data-i18n-key]');
+            const t = translations[lang];
+
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n-key');
+                if (t[key]) {
+                    // Handle placeholder
+                    if (el.tagName === 'TEXTAREA' && el.hasAttribute('data-i18n-placeholder')) {
+                        el.setAttribute('placeholder', t[key]);
+                    } 
+                    // Check if content contains HTML (e.g., strong tags)
+                    else if (t[key].includes('**')) {
+                        // Simple Markdown-like bold replacement for innerHTML
+                        el.innerHTML = t[key].replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                    } else {
+                        el.textContent = t[key];
+                    }
+                }
+            });
+
+            // Update button active state
+            document.querySelectorAll('.lang-button').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            document.getElementById('lang-' + lang).classList.add('active');
+            
+            // Update HTML lang attribute for accessibility
+            document.documentElement.lang = lang;
+        }
+
+        // Initial load
+        window.onload = function() {
+            setLanguage(currentLang);
+        }
+    </script>
+
+</body>
+</html>
